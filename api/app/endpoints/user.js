@@ -17,6 +17,7 @@ class Route {
         return { user: await user.serializeForUser(user) };
     }
 
+
     static async getUserById({ user, path: { id } }) {
         await user.assertPermission(PERMISSIONS.ADMIN);
 

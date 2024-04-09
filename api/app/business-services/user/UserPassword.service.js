@@ -22,6 +22,7 @@ class UserPasswordService {
      * @param {object} user - The User object representing the user.
      * @param {string} token - The token used to create a new user token.
      */
+
     static async sendResetEmail(user, token) {
         const userName = user.username; // Assuming username is a property of the User object
         await UserPasswordService.createForgetToken(token);
