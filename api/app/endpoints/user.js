@@ -45,12 +45,11 @@ class Route {
     /**
      * Checks the validity of a token.
      * @param {object} token - The token object to be checked.
-     * @returns {Promise<checkValidity|null>} - Indicates whether the token is valid (checkValidity) or not (null).
+     * @returns {Promise<{ success: boolean }>} - Indicates whether the token is valid
+        ({ success: true }) or not ({ success: false }).
      */
     static async checkTokenValidity({ query: { token } }) {
-        const checkValidity = await UserPasswordService.resetToken(token);
-        if (!checkValidity)
-            throw new HttpError(403, "Error checking token validity");
+        const checkValidity = await UserPasswordService.validateResetToken(token);
         return checkValidity;
     }
 

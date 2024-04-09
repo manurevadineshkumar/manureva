@@ -19,30 +19,31 @@ class UserPasswordService {
 
     /**
      * Creates a function to handle the forget password process and sends an email to the current user.
-     * @param {*} retrieved_email - The email address of the user.
+     * @param {object} user - The User object representing the user.
      * @param {string} token - The token used to create a new user token.
      */
-    static async sendResetEmail(retrieved_email, token) {
-        const userName = retrieved_email.username;
+    static async sendResetEmail(user, token) {
+        const userName = user.username; // Assuming username is a property of the User object
         await UserPasswordService.createForgetToken(token);
-        const BASE_URLS = process.env.NODE_ENV == "production"
+        const BASE_URLS = process.env.NODE_ENV === "production"
             ? "https://backoffice.korvin.io"
             : "http://127.0.0.1:8383";
-        const base_url = BASE_URLS + "/password-rest/?token=" + token;
-        const variables = { username: userName, email: retrieved_email, token: token, baseurl: base_url };
+        const base_url = `${BASE_URLS}/password-rest/?token=${token}`;
+        const variables = { username: userName, email: user.email, token, baseurl: base_url };
         Mailer.sendMail({
             template_id: "resetPassword",
-            to: retrieved_email,
+            to: user.email, // Assuming user.email contains the email address of the user
             variables
         });
     }
 
     /**
-     * Checks whether the provided token is valid for the current user request.
-     * @param {string} token - The token to check for validity.
-     * @returns  Returns true if the token is valid, otherwise false indicating failure.
+     * Validates whether the provided reset token is still valid.
+     * @param {string} token - The reset token to validate.
+     * @returns {Promise<{ success: boolean }>} Returns an object indicating the validity of the token
+     *  (true if valid, otherwise false).
      */
-    static async resetToken(token) {
+    static async validateResetToken(token) {
         try {
             const validity = await UserPasswordService.getByResetToken(token);
             let currentTimestamp = Math.floor(Date.now() / 1000);
