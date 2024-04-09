@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korvin scraper monitoring panel</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/img/favicon.png">
+</head>
+<body>
+<template class="scraper-template">
+    <div class="scraper">
+        <div class="state-bar idle">
+            <div class="state-fill"></div>
+        </div>
+        <h1>Scraper #0</h1>
+        <input class="active-input" type="checkbox">
+        <a href="#" target="_blank" class="url">https://google.com</a>
+        <div class="progress-bar"></div>
+        <ul class="timing">
+            <li>Current: <span class="current-timing"></span></li>
+        </ul>
+    </div>
+</template>
+<nav>
+    <h1>Korvin scrapers</h1>
+    <div class="status"></div>
+</nav>
+<main>
+    <section class="scrapers"></section>
+    <section class="sidebar right expanded">
+        <div class="arrow"></div>
+        <div class="controls">
+            <div class="headings">
+                <p>Controls</p>
+                <p>Queue</p>
+                <p>Logs</p>
+                <p>Stats</p>
+            </div>
+            <div class="pages">
+                <section class="controls-page">
+                    <h1>General</h1>
+                    <div class="row">
+                        <button class="primary full pause-button">Pause all</button>
+                    </div>
+                </section>
+                <section class="queue-page">
+                    <div class="queue-body"></div>
+                </section>
+                <section class="logs-page"></section>
+                <section class="stats-page">
+                    <h1>General</h1>
+                    <div class="row">
+                        <label>Total scrapers</label>
+                        <span class="total-scrapers">0</span>
+                    </div>
+                    <div class="row">
+                        <label>Active scrapers</label>
+                        <span class="active-scrapers">0</span>
+                    </div>
+                    <div class="row">
+                        <label>Queue size</label>
+                        <span class="queue-size">0</span>
+                    </div>
+                    <div class="row">
+                        <label>Avg scrape time</label>
+                        <span class="avg-time">-</span>
+                    </div>
+                    <div class="row">
+                        <label>ETA</label>
+                        <span class="eta">-</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script type="module" src="/js/App.js"></script>
+</body>
+</html>

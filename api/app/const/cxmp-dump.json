@@ -1,0 +1,10 @@
+{
+    "fields": [
+        "EAN",
+        "title",
+        "description",
+        "wholesale-price",
+        "retail-price",
+        "images"
+    ]
+}

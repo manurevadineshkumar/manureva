@@ -1,0 +1,38 @@
+{
+  "name": "backoffice-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 8383",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext js,vue src/"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.5",
+    "@mdi/font": "^7.4.47",
+    "@vueuse/core": "^10.4.1",
+    "events": "^3.3.0",
+    "socket.io-client": "^4.7.2",
+    "vue": "^3.3.4",
+    "vue-google-autocomplete": "^1.1.4",
+    "vue-router": "^4.2.5",
+    "vue-tel-input": "^8.1.4",
+    "vuetify": "^3.4.7"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^6.7.4",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "espree": "^9.6.1",
+    "prettier": "^3.0.3",
+    "vite": "^4.4.9",
+    "vue-eslint-parser": "^9.3.1"
+  }
+}

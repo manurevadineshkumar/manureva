@@ -1,0 +1,42 @@
+Order Number: krvn00000000
+Order Time: $YEAR年$MONTH月$DAY日 $HOURS時$MINUTES分$SECONDS秒
+■Guest Information
+Name: Korvin
+Name Spell: Korvin
+Post Code: 93290
+Address: 19 rue du Sausset, Tremblay en France, FRANCE
+Tel: +33 6 27 32 66 23
+Email: test@hamee.com
+Payment
+Payment method: 0
+Order information
+------------------------------------------------------------
+Product Number: $PRODUCT_PD
+Product Name: $PRODUCT_NAME
+Material: $PRODUCT_MATERIAL
+Price: $PRICE_UNIT
+Unit: $PRODUCT_COUNT
+Subtotal: $PRICE_TOTAL
+------------------------------------------------------------
+Total: $PRICE_TOTAL
+Tax: ￥0
+Shipping: ￥0
+Fee: ￥0
+Other Fee: ￥0
+Point: ￥0
+------------------------------------------------------------
+Total in tax: $PRICE_TOTAL
+------------------------------------------------------------
+Shipping Information
+■ Destination 1
+　Name: Morgan
+　Name Spell: Morgan
+　Post Code: 93290
+　Address: 19 rue du Sausset, Tremblay en France, FRANCE
+　Tel: +33 6 27 32 66 23
+　Gift Wrapping: 0
+　Shipping Method: 0
+　Desired delivery date: 0
+　Desired delivery time: 0
+■ Remarks
+This is an automated email. Please do not reply.

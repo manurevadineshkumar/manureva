@@ -1,0 +1,495 @@
+{
+    "permissions": [
+        {
+            "id": 1,
+            "name": "ADMIN",
+            "description": "Grants full access to the API. Overrides all permissions."
+        },
+        {
+            "id": 2,
+            "name": "USER_READ",
+            "description": "Read users by id",
+            "is_default": true
+        },
+        {
+            "id": 3,
+            "name": "USER_LIST",
+            "description": "List users"
+        },
+        {
+            "id": 4,
+            "name": "USER_UPDATE",
+            "description": "Update any user",
+            "is_default": true
+        },
+        {
+            "id": 5,
+            "name": "PRODUCT_READ",
+            "description": "Read products by id",
+            "is_default": true
+        },
+        {
+            "id": 6,
+            "name": "PRODUCT_LIST",
+            "description": "List products",
+            "is_default": true
+        },
+        {
+            "id": 7,
+            "name": "PRODUCT_CREATE",
+            "description": "Create new products"
+        },
+        {
+            "id": 8,
+            "name": "PRODUCT_UPDATE",
+            "description": "Update products"
+        },
+        {
+            "id": 9,
+            "name": "PRODUCT_IMAGE_UPLOAD",
+            "description": "Add images to products"
+        },
+        {
+            "id": 10,
+            "name": "PRODUCT_IMAGE_DELETE",
+            "description": "Delete product images"
+        },
+        {
+            "id": 11,
+            "name": "PRODUCT_TAGS_UPDATE",
+            "description": "Assign tags to products"
+        },
+        {
+            "id": 13,
+            "name": "ORDER_CREATE",
+            "description": "Order products"
+        },
+        {
+            "id": 14,
+            "name": "ORDER_LIST",
+            "description": "List order history"
+        },
+        {
+            "id": 15,
+            "name": "COLOR_LIST",
+            "description": "List colors",
+            "is_default": true
+        },
+        {
+            "id": 16,
+            "name": "COLOR_CREATE",
+            "description": "Create new colors"
+        },
+        {
+            "id": 17,
+            "name": "MATERIAL_LIST",
+            "description": "List materials",
+            "is_default": true
+        },
+        {
+            "id": 18,
+            "name": "MATERIAL_CREATE",
+            "description": "Create new materials"
+        },
+        {
+            "id": 19,
+            "name": "BRAND_LIST",
+            "description": "List brands",
+            "is_default": true
+        },
+        {
+            "id": 20,
+            "name": "BRAND_READ",
+            "description": "Read brands by id",
+            "is_default": true
+        },
+        {
+            "id": 21,
+            "name": "BRAND_CREATE",
+            "description": "Create new brands"
+        },
+        {
+            "id": 22,
+            "name": "TYPE_LIST",
+            "description": "List types",
+            "is_default": true
+        },
+        {
+            "id": 23,
+            "name": "TYPE_READ",
+            "description": "Read types by id",
+            "is_default": true
+        },
+        {
+            "id": 24,
+            "name": "TYPE_CREATE",
+            "description": "Create new types"
+        },
+        {
+            "id": 25,
+            "name": "SUBTYPE_LIST",
+            "description": "List subtypes",
+            "is_default": true
+        },
+        {
+            "id": 26,
+            "name": "SUBTYPE_READ",
+            "description": "Read subtypes by id",
+            "is_default": true
+        },
+        {
+            "id": 27,
+            "name": "SUBTYPE_CREATE",
+            "description": "Create new subtypes"
+        },
+        {
+            "id": 28,
+            "name": "TAG_LIST",
+            "description": "List own tags",
+            "is_default": true
+        },
+        {
+            "id": 29,
+            "name": "TAG_CREATE",
+            "description": "Create new tags"
+        },
+        {
+            "id": 30,
+            "name": "TAG_UPDATE",
+            "description": "Update tags"
+        },
+        {
+            "id": 31,
+            "name": "TAG_DELETE",
+            "description": "Delete tags"
+        },
+        {
+            "id": 32,
+            "name": "SHOP_LIST",
+            "description": "List own user shops",
+            "is_default": true
+        },
+        {
+            "id": 33,
+            "name": "SHOP_READ",
+            "description": "Read own shops by id",
+            "is_default": true
+        },
+        {
+            "id": 34,
+            "name": "SHOP_CREATE",
+            "description": "Create user shops"
+        },
+        {
+            "id": 35,
+            "name": "SHOP_UPDATE",
+            "description": "Update user shops"
+        },
+        {
+            "id": 36,
+            "name": "SHOP_DELETE",
+            "description": "Delete user shops"
+        },
+        {
+            "id": 37,
+            "name": "LOG_SESSION_LIST",
+            "description": "List log sessions"
+        },
+        {
+            "id": 38,
+            "name": "LOG_SESSION_READ",
+            "description": "Read log sessions by id"
+        },
+        {
+            "id": 39,
+            "name": "LOG_MODULE_LIST",
+            "description": "List log modules"
+        },
+        {
+            "id": 40,
+            "name": "LOG_MODULE_READ",
+            "description": "Read log modules by id"
+        },
+        {
+            "id": 41,
+            "name": "LOG_PRODUCT_LIST",
+            "description": "List log products"
+        },
+        {
+            "id": 42,
+            "name": "LOG_PRODUCT_READ",
+            "description": "Read log products by id"
+        },
+        {
+            "id": 43,
+            "name": "STATISTICS_READ",
+            "description": "Read global statistics"
+        },
+        {
+            "id": 44,
+            "name": "PRODUCT_SHOW_PURCHASE_PRICE",
+            "description": "See the product purchase_price_cents"
+        },
+        {
+            "id": 45,
+            "name": "PRODUCT_SHOW_RETAIL_PRICE",
+            "description": "See the product retail_price"
+        },
+        {
+            "id": 46,
+            "name": "PRODUCT_SHOW_WHOLESALE_PRICE",
+            "description": "See the wholesale price"
+        },
+        {
+            "id": 47,
+            "name": "PRODUCT_SHOW_CONSIGNMENT_PRICE",
+            "description": "See the consignment price"
+        },
+        {
+            "id": 48,
+            "name": "PRODUCT_SHOW_BRAND",
+            "description": "See the product brand"
+        },
+        {
+            "id": 49,
+            "name": "PRODUCT_SHOW_MODEL",
+            "description": "See the product model"
+        },
+        {
+            "id": 50,
+            "name": "PRODUCT_SHOW_TYPE",
+            "description": "See the product type"
+        },
+        {
+            "id": 51,
+            "name": "PRODUCT_SHOW_SUBTYPE",
+            "description": "See the product subtype"
+        },
+        {
+            "id": 52,
+            "name": "PRODUCT_SHOW_GRADE",
+            "description": "See the product grade"
+        },
+        {
+            "id": 53,
+            "name": "PRODUCT_SHOW_SIZE",
+            "description": "See the product size"
+        },
+        {
+            "id": 54,
+            "name": "PRODUCT_SHOW_COLORS",
+            "description": "See the product colors"
+        },
+        {
+            "id": 55,
+            "name": "PRODUCT_SHOW_MATERIALS",
+            "description": "See the product materials"
+        },
+        {
+            "id": 56,
+            "name": "PRODUCT_SHOW_HAS_SERIAL",
+            "description": "See the product has_serial"
+        },
+        {
+            "id": 57,
+            "name": "PRODUCT_SHOW_HAS_GUARANTEE_CARD",
+            "description": "See the product has_guarantee_card"
+        },
+        {
+            "id": 58,
+            "name": "PRODUCT_SHOW_HAS_BOX",
+            "description": "See the product has_box"
+        },
+        {
+            "id": 59,
+            "name": "PRODUCT_SHOW_HAS_STORAGE_BAG",
+            "description": "See the product has_storage_bag"
+        },
+        {
+            "id": 60,
+            "name": "PRODUCT_SHOW_VENDOR",
+            "description": "See the product vendor"
+        },
+        {
+            "id": 61,
+            "name": "PRODUCT_SHOW_STATUS",
+            "description": "See the product status (only in frontend)"
+        },
+        {
+            "id": 62,
+            "name": "CART_ADD_PRODUCT",
+            "description": "Add products to cart"
+        },
+        {
+            "id": 63,
+            "name": "CART_REMOVE_PRODUCT",
+            "description": "Remove products from cart"
+        },
+        {
+            "id": 64,
+            "name": "CART_LIST_PRODUCTS",
+            "description": "List products in his cart"
+        },
+        {
+            "id": 65,
+            "name": "CART_LIST_ALL",
+            "description": "See all carts (!!! admin only !!!)"
+        },
+        {
+            "id": 66,
+            "name": "ORDER_SHOW_STATUS",
+            "description": "See the order status"
+        },
+        {
+            "id": 67,
+            "name": "ORDER_SHOW_DATE",
+            "description": "See the order date"
+        },
+        {
+            "id": 68,
+            "name": "ORDER_SHOW_PRICE",
+            "description": "See the order price"
+        },
+        {
+            "id": 69,
+            "name": "ORDER_SHOW_SALESCHANNEL",
+            "description": "See the order channel"
+        },
+        {
+            "id": 70,
+            "name": "ORDER_SHOW_DETAILS",
+            "description": "See the order details"
+        },
+        {
+            "id": 71,
+            "name": "READ_ORDER_DETAILS",
+            "description": "Download/read pdf/comment  in the order details"
+        },
+        {
+            "id": 72,
+            "name": "UPDATE_ORDER_DETAILS",
+            "description": "Upload/change pdf/comment in the order details"
+        },
+        {
+            "id": 73,
+            "name": "ORDER_LIST_SALES",
+            "description": "See the sales page"
+        },
+        {
+            "id": 74,
+            "name": "ORDER_LIST_PURCHASES",
+            "description": "See the purchases page"
+        },
+        {
+            "id": 75,
+            "name": "SALES_CHANNEL_LIST",
+            "description": "See list of channels"
+        },
+        {
+            "id": 76,
+            "name": "SALES_CHANNEL_READ_DETAILS",
+            "description": "See the order details channel"
+        },
+        {
+            "id": 77,
+            "name": "PRODUCT_EDIT_STATUS",
+            "description": "Edit the product status"
+        },
+        {
+            "id": 79,
+            "name": "PRODUCT_SHOW_DISCOUNT",
+            "description": "See the product discount"
+        },
+        {
+            "id": 80,
+            "name": "COUNTRY_LIST",
+            "description": "List all countries"
+        },
+        {
+            "id": 81,
+            "name": "MARKETPLACE_LIST",
+            "description": "List user's marketplaces"
+        },
+        {
+            "id": 82,
+            "name": "MARKETPLACE_UPDATE",
+            "description": "Update user's marketplaces"
+        }
+    ],
+    "templates": {
+        "wholesaler": [
+            46,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            61,
+            62,
+            63,
+            64,
+            70
+        ],
+        "instant_purchase": [
+            2,
+            4,
+            5,
+            6,
+            15,
+            17,
+            19,
+            20,
+            22,
+            23,
+            25,
+            26,
+            28,
+            29,
+            30,
+            31,
+            46,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            62,
+            63,
+            64,
+            70,
+            71,
+            72,
+            74,
+            80
+        ],
+        "on_demand_retail": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            47,
+            73,
+            75
+        ],
+        "access_b2b_network": [],
+        "distribute_on_marketplaces": [
+            81,
+            82
+        ]
+    }
+}

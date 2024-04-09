@@ -1,0 +1,12 @@
+{
+    "title": "Update images url to S3",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "UpdateS3ImageUrls"
+            }
+        ]
+    ]
+}

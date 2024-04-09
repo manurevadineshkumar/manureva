@@ -1,0 +1,37 @@
+{
+    "fields": [
+        "Nom Produit",
+        "Type de produit",
+        "Marque",
+        "Pointure",
+        "Dimension",
+        "Couleur",
+        "Matière",
+        "Etat",
+        "Boite d'origine OUI/NON",
+        "Certificat d'authentification OUI/NON",
+        "Description",
+        "Url",
+        "Pays de Fabrication",
+        "Stock",
+        "Variant_id",
+        "Sku",
+        "Base Price",
+        "Retail Price",
+        "Wholesale Price",
+        "Status",
+        "Prix après remise TTC",
+        "Discount (%) recommandé",
+        "Discount Korvin",
+        "Prix Choose TTC recommandé",
+        "Prix de rétrocession HT",
+        "Frais de port"
+    ],
+
+    "grades": {
+        "S": "Jamais porté",
+        "A": "Très bon état",
+        "B": "Bon état",
+        "C": "Satisfaisant"
+    }
+}

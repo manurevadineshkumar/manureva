@@ -1,0 +1,23 @@
+{
+    "access-scopes": [
+        "write_assigned_fulfillment_orders",
+        "read_assigned_fulfillment_orders",
+        "write_fulfillments",
+        "read_fulfillments",
+        "write_inventory",
+        "read_inventory",
+        "write_online_store_pages",
+        "read_online_store_pages",
+        "write_product_feeds",
+        "read_product_feeds",
+        "write_product_listings",
+        "read_product_listings",
+        "write_products",
+        "read_products",
+        "write_channels",
+        "read_channels",
+        "write_shipping",
+        "read_shipping",
+        "read_orders"
+    ]
+}

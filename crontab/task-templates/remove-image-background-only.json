@@ -1,0 +1,12 @@
+{
+    "title": "Remove images background for all products",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "removeBackgroundImage"
+            }
+        ]
+    ]
+}

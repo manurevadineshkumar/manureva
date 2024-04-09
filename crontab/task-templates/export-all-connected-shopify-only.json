@@ -1,0 +1,12 @@
+{
+    "title": "Export All Shopify only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "exportAllConnectedShopify"
+            }
+        ]
+    ]
+}

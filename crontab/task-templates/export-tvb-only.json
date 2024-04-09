@@ -1,0 +1,10 @@
+{
+    "title": "Export TVB only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {"operation_id": "exportToVintageBar"}
+        ]
+    ]
+}

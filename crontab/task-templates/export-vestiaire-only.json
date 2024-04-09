@@ -1,0 +1,10 @@
+{
+    "title": "Export Vestiaire Collective only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {"operation_id": "exportToVestiaireCollective"}
+        ]
+    ]
+}

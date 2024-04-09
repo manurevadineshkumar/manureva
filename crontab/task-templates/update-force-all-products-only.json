@@ -1,0 +1,15 @@
+{
+    "title": "Update all products",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "updateProducts",
+                "params": {
+                    "force_all": true
+                }
+            }
+        ]
+    ]
+}

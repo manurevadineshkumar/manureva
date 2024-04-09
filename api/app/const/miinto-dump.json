@@ -1,0 +1,41 @@
+{
+    "fields": [
+        "id",
+        "gtin",
+        "item_group_id",
+        "brand",
+        "title",
+        "product_type",
+        "gender",
+        "color",
+        "size",
+        "image_link",
+        "additional_image_link",
+        "c:stock_level:integer",
+        "c:season_tag:string",
+        "description",
+        "material",
+        "washing",
+        "c:retail_price_EUR:integer",
+        "c:discount_retail_price_EUR:integer"
+    ],
+    "brands": {
+        "CHANEL": "Chanel Vintage",
+        "HERMES": "Hermès Vintage",
+        "CHRISTIAN DIOR": "Dior Vintage",
+        "BALENCIAGA": "Balenciaga Vintage",
+        "CELINE": "Celine Vintage",
+        "FENDI": "Fendi Vintage",
+        "GUCCI": "Gucci Vintage",
+        "LOUIS VUITTON": "Louis Vuitton Vintage",
+        "PRADA": "Prada Vintage",
+        "SAINT LAURENT PARIS": "Saint Laurent Vintage",
+        "BOTTEGA VENETA": "Bottega Veneta Vintage",
+        "STELLA MCCARTNEY": "Stella McCartney Pre-Owned",
+        "DOLCE&GABBANA": "Dolce & Gabbana Pre-owned",
+        "LOEWE": "Loewe Pre-owned",
+        "SALVATORE FERRAGAMO": "Salvatore Ferragamo Pre-owned",
+        "BURBERRY": "Burberry Vintage",
+        "COACH": "Coach Pre-owned"
+    }
+}

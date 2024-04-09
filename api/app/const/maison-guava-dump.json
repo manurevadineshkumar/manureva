@@ -1,0 +1,18 @@
+{
+    "fields": [
+        "sku",
+        "name",
+        "brand",
+        "size",
+        "quantity",
+        "retailPrice",
+        "margin",
+        "category",
+        "image-0",
+        "image-1",
+        "image-2",
+        "image-3",
+        "vendorType",
+        "TVA"
+    ]
+}

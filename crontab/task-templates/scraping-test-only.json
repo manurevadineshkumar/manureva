@@ -1,0 +1,19 @@
+{
+    "title": "Scraping test only",
+    "date": $DATE,
+    "inputs": [
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "MIU MIU"}}
+    ],
+    "tasks": [
+        [
+            {
+                "operation_id": "listVendors"
+            }
+        ],
+        [
+            {
+                "operation_id": "scrapeVendors"
+            }
+        ]
+    ]
+}

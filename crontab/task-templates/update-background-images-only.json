@@ -1,0 +1,12 @@
+{
+    "title": "Update cropped background images only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "updateBackgroundImage"
+            }
+        ]
+    ]
+}

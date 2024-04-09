@@ -1,0 +1,92 @@
+{
+    "title": "Daily scraping",
+    "date": $DATE,
+    "inputs": [
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "MIU MIU"}}
+    ],
+    "tasks": [
+        [
+            {
+                "operation_id": "listVendors"
+            }
+        ],
+        [
+            {
+                "operation_id": "scrapeVendors"
+            }
+        ],
+        [
+            {
+                "operation_id": "updateAvailableProducts"
+            }
+        ],
+        [
+            {
+                "operation_id": "updateProducts"
+            }
+        ],
+        [
+            {
+                "operation_id": "exportToAirtable",
+                "params": {
+                    "seller": "korvin",
+                    "base_id": "$KORVIN_AIRTABLE_BASE_ID",
+                    "access_token": "$KORVIN_AIRTABLE_ACCESS_TOKEN",
+                    "type_id": 2
+                }
+            },
+            {
+                "operation_id": "exportToExternalAirtable",
+                "params": {
+                    "seller": "ben",
+                    "base_id": "$BEN_AIRTABLE_BASE_ID",
+                    "price_factors": [
+                        {
+                            "max": 1100,
+                            "factor": 1.1
+                        },
+                        {
+                            "max": 4000,
+                            "factor": 1.05
+                        },
+                        {
+                            "max": 10000,
+                            "factor": 1.03
+                        },
+                        {
+                            "factor": 1.015
+                        }
+                    ],
+                    "access_token": "$BEN_AIRTABLE_ACCESS_TOKEN"
+                }
+            },
+            {
+                "operation_id": "exportToMiinto"
+            },
+            {
+                "operation_id": "exportToJoliCloset"
+            },
+            {
+                "operation_id": "exportToVestiaireCollective"
+            },
+            {
+                "operation_id": "exportToVintageBar"
+            },
+            {
+                "operation_id": "exportToShopify",
+                "params": {
+                    "store": "korvin-luxury",
+                    "token": "$KORVIN_SHOPIFY_TOKEN"
+                }
+            },
+            {
+                "operation_id": "exportToShopify",
+                "params": {
+                    "store": "xxxx-2bc1",
+                    "token": "$EXTERNAL_SHOPIFY_TOKEN",
+                    "price_type": ""
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Scraping opulencevintage list only",
+    "date": $DATE,
+    "inputs": [
+        {"vendor": "OPULENCE_VINTAGE", "type": 0}
+    ],
+    "tasks": [
+        [
+            {
+                "operation_id": "listVendors"
+            }
+        ],
+        [
+            {
+                "operation_id": "scrapeVendors"
+            }
+        ],
+        [
+            {
+                "operation_id": "updateAvailableProducts"
+            }
+        ],
+        [
+            {
+                "operation_id": "updateProducts"
+            }
+        ]
+    ]
+}

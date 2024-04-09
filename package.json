@@ -1,0 +1,10 @@
+{
+  "name": "korvin",
+  "description": "Top level package.json",
+  "scripts": {
+    "api": "cd api && npm run start:dev",
+    "backoffice": "cd backoffice && npm run dev",
+    "scraper": "cd scraping && npm run start:dev",
+    "tunneling": "pagekite.py 8080 korvin.pagekite.me"
+  }
+}

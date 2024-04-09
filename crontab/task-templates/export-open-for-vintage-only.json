@@ -1,0 +1,10 @@
+{
+    "title": "Export Open For Vintage only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {"operation_id": "exportToOpenForVintage"}
+        ]
+    ]
+}

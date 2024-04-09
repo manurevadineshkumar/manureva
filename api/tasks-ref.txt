@@ -1,0 +1,8 @@
+=== REDIS ===
+active-task-group -> task_group: TaskGroup
+active-task-group-tasks -> names: Set<String>
+active-task-group-input -> entries: List<String>
+active-task-group-ongoing -> entries: Map<String, String>
+active-task-group-output -> entries: List<String>
+
+active-task:{type} -> task: Task

@@ -1,0 +1,24 @@
+{
+    "fields": [
+        "Unique Id",
+        "Name",
+        "Image URL",
+        "Brand",
+        "Description",
+        "Gender",
+        "Size",
+        "Colour",
+        "Material",
+        "Price (inc VAT)",
+        "Quantity",
+        "Availability",
+        "Merchant Category Path",
+        "MPN",
+        "Link URL",
+        "Alternative Image URL (1)",
+        "Currency"
+    ],
+    "currency": "EUR",
+    "availability": ["Out of Stock", "In Stock"],
+    "gender": ["Female", "Male"]
+}

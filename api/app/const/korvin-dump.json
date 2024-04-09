@@ -1,0 +1,33 @@
+{
+    "fields": [
+        "identifier",
+        "name",
+        "brand"
+    ],
+    "brands": {
+        "BALENCIAGA": "Balenciaga",
+        "BOTTEGA VENETA": "Bottega Veneta",
+        "BURBERRY": "Burberry",
+        "CARTIER": "Cartier",
+        "CELINE": "Céline",
+        "CHANEL": "Chanel",
+        "CHLOE": "Chloé",
+        "CHRISTIAN DIOR": "Christian Dior",
+        "COACH": "Coach",
+        "DOLCE&GABBANA": "Dolce & Gabbana",
+        "FENDI": "Fendi",
+        "GUCCI": "Gucci",
+        "HERMES": "Hermès",
+        "LOEWE": "Loewe",
+        "LOUIS VUITTON": "Louis Vuitton",
+        "MIU MIU": "Miu Miu",
+        "NIKE": "Nike",
+        "PRADA": "Prada",
+        "SACAI": "Sacai",
+        "SAINT LAURENT PARIS": "Saint Laurent Paris",
+        "SALVATORE FERRAGAMO": "Salvatore Ferragamo",
+        "STELLA MCCARTNEY": "Stella McCartney",
+        "SUPREME": "Supreme",
+        "THE NORTH FACE": "The North Face"
+    }
+}

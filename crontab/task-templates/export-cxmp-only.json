@@ -1,0 +1,15 @@
+{
+    "title": "Export CXMP only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "exportToCXMP",
+                "params": {
+                    "tag_id": 2
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Export Choose only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {"operation_id": "exportToChoose"}
+        ]
+    ]
+}

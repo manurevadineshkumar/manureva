@@ -1,0 +1,17 @@
+{
+    "title": "Export Shopify only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "exportToShopify",
+                "params": {
+                    "store": "xxxx-2bc1",
+                    "token": "$EXTERNAL_SHOPIFY_TOKEN",
+                    "price_type": ""
+                }
+            }
+        ]
+    ]
+}

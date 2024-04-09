@@ -1,0 +1,8 @@
+CREATE TABLE sales_channels
+(
+    id INT UNSIGNED AUTO_INCREMENT
+        PRIMARY KEY,
+    name VARCHAR(32) NOT NULL,
+    ratio DECIMAL(3,2) NOT NULL,
+    type ENUM('RETAIL', 'WHOLESALE') NOT NULL
+);

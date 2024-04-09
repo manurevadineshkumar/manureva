@@ -1,0 +1,17 @@
+{
+    "title": "Export External Airtable only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "exportToExternalAirtable",
+                "params": {
+                    "seller": "monogram-b2b",
+                    "base_id": "$MONOGRAM_B2B_AIRTABLE_BASE_ID",
+                    "access_token": "$MONOGRAM_B2B_AIRTABLE_ACCESS_TOKEN"
+                }
+            }
+        ]
+    ]
+}

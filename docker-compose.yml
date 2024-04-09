@@ -1,0 +1,61 @@
+version: "3.9"
+services:
+    api:
+        build:
+            context: ./api
+        ports:
+            - "127.0.0.1:8080:8080"
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        env_file:
+            - .env
+        environment:
+            IS_PRODUCTION: "1"
+            STATIC_PATH: "/korvin-api/static/"
+            REMBG_URL: "http://background-remover:5000/"
+        volumes:
+            - ./data/:/korvin-api/data/
+            - ./static/:/korvin-api/static/
+        networks:
+            - backend
+        restart: on-failure
+
+    scraping:
+        build:
+            context: ./scraping
+        ports:
+            - "127.0.0.1:8282:8282"
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        env_file:
+            - .env
+        environment:
+            IS_PRODUCTION: "1"
+            STATIC_PATH: "/korvin-scraping/static/"
+        volumes:
+            - ./static/:/korvin-scraping/static/
+        networks:
+            - backend
+        restart: on-failure
+
+    backoffice:
+        build:
+            context: ./backoffice
+        volumes:
+            - ./backoffice/dist:/korvin-backoffice/dist/
+        restart: "no"
+
+#    background-remover:
+#        build:
+#            context: ./rem-background
+#        networks:
+#            - backend
+#        restart: on-failure
+
+networks:
+    backend:
+        name: backend
+        ipam:
+            config:
+                - subnet: 192.168.0.0/16
+                  gateway: 192.168.0.1

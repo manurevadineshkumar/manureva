@@ -1,0 +1,1078 @@
+{
+	"info": {
+		"_postman_id": "09b834cb-053f-41a8-9e3e-806304cc4b38",
+		"name": "Korvin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "session",
+			"item": [
+				{
+					"name": "/session",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"{{USERNAME}}\",\n    \"password\": \"{{PASSWORD}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/session",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/session",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/session",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"session"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "/user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"Admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"current_password\": \"{{PASSWORD}}\",\n    \"new_password\": \"{{PASSWORD}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "/products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/products",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "page_offset",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "batch_size",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/products/search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/products/search",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "page_offset",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "batch_size",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/product/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/product/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{PRODUCT_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/product/{id}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_exported_vc\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/product/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{PRODUCT_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/product/:product_id/tag/:tag_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/product/:product_id/tag/:tag_id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								":product_id",
+								"tag",
+								":tag_id"
+							],
+							"variable": [
+								{
+									"key": "product_id",
+									"value": "{{PRODUCT_ID}}"
+								},
+								{
+									"key": "tag_id",
+									"value": "{{TAG_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/product/:product_id/tag/:tag_id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/product/:product_id/tag/:tag_id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								":product_id",
+								"tag",
+								":tag_id"
+							],
+							"variable": [
+								{
+									"key": "product_id",
+									"value": "{{PRODUCT_ID}}"
+								},
+								{
+									"key": "tag_id",
+									"value": "{{TAG_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/product/:product_id/store/:store_id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/product/:product_id/store/:store_id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								":product_id",
+								"store",
+								":store_id"
+							],
+							"variable": [
+								{
+									"key": "product_id",
+									"value": "{{PRODUCT_ID}}"
+								},
+								{
+									"key": "store_id",
+									"value": "{{STORE_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/product/:product_id/store/:store_id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/product/:product_id/store/:store_id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"product",
+								":product_id",
+								"store",
+								":store_id"
+							],
+							"variable": [
+								{
+									"key": "product_id",
+									"value": "{{PRODUCT_ID}}"
+								},
+								{
+									"key": "store_id",
+									"value": "{{STORE_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "/orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/orders",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "prev_id",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": \"{{PRODUCT_ID}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/order",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dump",
+			"item": [
+				{
+					"name": "/vestiaire",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "miinto",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "6w1eIWpEm9ZArFfY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/dump/vestiaire?token=Fi5D3VQhU4dBI11RIjecJDH3fTbyLS2V",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dump",
+								"vestiaire"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "Fi5D3VQhU4dBI11RIjecJDH3fTbyLS2V"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/miinto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "miinto",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "6w1eIWpEm9ZArFfY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/dump/miinto?token=ky1XloIZiiQZm56R1ogrnjr0ygXtsnJi",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dump",
+								"miinto"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "ky1XloIZiiQZm56R1ogrnjr0ygXtsnJi"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tag",
+			"item": [
+				{
+					"name": "/tags",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tags",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tags"
+							],
+							"query": [
+								{
+									"key": "prev_id",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "batch_size",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/tag",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Tag\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tag",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/tag/:id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Tag*\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tag/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tag",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{TAG_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/tag/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tag/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tag",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{TAG_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "store",
+			"item": [
+				{
+					"name": "/stores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/stores",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"stores"
+							],
+							"query": [
+								{
+									"key": "prev_id",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "batch_size",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Store\",\n    \"type\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/store",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store/:id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Store*\",\n    \"type\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/store/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"store",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{STORE_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/tag/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/store/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"store",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{STORE_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "color",
+			"item": [
+				{
+					"name": "/colors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/colors",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"colors"
+							],
+							"query": [
+								{
+									"key": "prev_id",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "batch_size",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "material",
+			"item": [
+				{
+					"name": "/materials",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/materials",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"materials"
+							],
+							"query": [
+								{
+									"key": "prev_id",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "batch_size",
+									"value": "8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://127.0.0.1:8080",
+			"type": "default"
+		},
+		{
+			"key": "USERNAME",
+			"value": "admin",
+			"type": "default"
+		},
+		{
+			"key": "PASSWORD",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "PRODUCT_ID",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "SHOPIFY_TOKEN",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "TAG_ID",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "STORE_ID",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

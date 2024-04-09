@@ -1,0 +1,10 @@
+{
+    "title": "Export Miinto only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {"operation_id": "exportToMiinto"}
+        ]
+    ]
+}

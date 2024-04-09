@@ -1,0 +1,17 @@
+{
+    "title": "Export Shopify only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "exportToShopify",
+                "params": {
+                    "store": "korvin-luxury",
+                    "token": "$KORVIN_SHOPIFY_TOKEN",
+                    "price_type": "retail"
+                }
+            }
+        ]
+    ]
+}

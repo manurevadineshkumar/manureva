@@ -1,0 +1,15 @@
+{
+    "title": "Export REBELLE only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "exportToRebelle",
+                "params": {
+                    "tag_id": 11
+                }
+            }
+        ]
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "scrapers": {
+        "Pikachu":  {
+            "is_active": true
+        },
+        "Jigglypuff":  {
+            "is_active":  true
+        },
+        "Vulpix":  {
+            "is_active":  true
+        },
+        "Eevee":  {
+            "is_active":  true
+        },
+        "Bulbasaur":  {},
+        "Squirtle":  {},
+        "Charmander":  {},
+        "Togepi":  {}
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Export Maison Guava only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {"operation_id": "exportMaisonGuava"}
+        ]
+    ]
+}

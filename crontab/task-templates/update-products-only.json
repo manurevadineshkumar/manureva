@@ -1,0 +1,12 @@
+{
+    "title": "Update products",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "updateProducts"
+            }
+        ]
+    ]
+}

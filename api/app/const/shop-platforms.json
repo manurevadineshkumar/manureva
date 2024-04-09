@@ -1,0 +1,11 @@
+{
+    "shopify": {
+        "title": "Shopify",
+        "can_import": true,
+        "can_export": true,
+        "examples": {
+            "url": "shop-name.myshopify.com",
+            "token": "shpat_ffffffffffffffffffffffffffffffff"
+        }
+    }
+}

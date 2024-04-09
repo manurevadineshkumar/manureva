@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <path fill="none" stroke="#888" stroke-linecap="round" d="M16 16L48 48M16 48L48 16"
+          stroke-width="8" stroke-linejoin="round" stroke-dasharray="0 60 0"
+          stroke-dashoffset="-60"/>
+</svg>

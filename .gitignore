@@ -1,0 +1,14 @@
+.env
+
+/*/node_modules/
+/static/
+
+/assets/*.keyshape
+
+/api/test-results.xml
+
+/scripts/**/__pycache__
+
+.vscode/
+
+dist/

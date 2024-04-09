@@ -1,0 +1,15 @@
+{
+    "title": "Export test only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {
+                "operation_id": "exportToYoox",
+                "params": {
+                    "tag_id": 25
+                }
+            }
+        ]
+    ]
+}

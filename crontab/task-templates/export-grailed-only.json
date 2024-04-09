@@ -1,0 +1,10 @@
+{
+    "title": "Export Grailed only",
+    "date": $DATE,
+    "inputs": [],
+    "tasks": [
+        [
+            {"operation_id": "exportToGrailed"}
+        ]
+    ]
+}

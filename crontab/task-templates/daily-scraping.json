@@ -1,0 +1,145 @@
+{
+    "title": "Daily scraping",
+    "date": $DATE,
+    "inputs": [
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "CHLOE"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "CHANEL"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "GUCCI"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "HERMES"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "CELINE"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "FENDI"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "CHRISTIAN DIOR"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "BOTTEGA VENETA"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "MIU MIU"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "PRADA"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "SAINT LAURENT PARIS"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "BALENCIAGA"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "STELLA MCCARTNEY"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "DOLCE&GABBANA"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "SALVATORE FERRAGAMO"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "LOEWE"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "BURBERRY"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "COACH"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON モンソー"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON ポシェッ"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON アルマ"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON キーポル"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON ネヴァーフル"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON ノエ"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON スピーディ"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON マルジョリー"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON デニム"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"search": "LOUIS VUITTON アクセサリー"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "THE NORTH FACE"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "NIKE"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "SUPREME"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "CARTIER"}},
+        {"vendor": "RECLOJP", "type": 0, "params": {"brand": "SACAI"}},
+        {"vendor": "OPULENCE_VINTAGE", "type": 0}
+    ],
+    "tasks": [
+        [
+            {
+                "operation_id": "listVendors"
+            }
+        ],
+        [
+            {
+                "operation_id": "scrapeVendors"
+            }
+        ],
+        [
+            {
+                "operation_id": "updateAvailableProducts"
+            }
+        ],
+        [
+            {
+                "operation_id": "updateProducts"
+            }
+        ],
+        [
+            {
+                "operation_id": "exportToAirtable",
+                "params": {
+                    "seller": "korvin",
+                    "base_id": "$KORVIN_AIRTABLE_BASE_ID",
+                    "access_token": "$KORVIN_AIRTABLE_ACCESS_TOKEN",
+                    "type_id": 2
+                }
+            },
+            {
+                "operation_id": "exportToExternalAirtable",
+                "params": {
+                    "seller": "monogram-b2b",
+                    "base_id": "$MONOGRAM_B2B_AIRTABLE_BASE_ID",
+                    "access_token": "$MONOGRAM_B2B_AIRTABLE_ACCESS_TOKEN"
+                }
+            },
+            {
+                "operation_id": "exportToMiinto"
+            },
+            {
+                "operation_id": "exportToJoliCloset"
+            },
+            {
+                "operation_id": "exportToCXMP",
+                "params": {
+                    "tag_id": 2
+                }
+            },
+            {
+                "operation_id": "exportToVestiaireCollective"
+            },
+            {
+                "operation_id": "exportToVintageBar"
+            },
+            {
+                "operation_id": "exportToShopify",
+                "params": {
+                    "store": "korvin-luxury",
+                    "token": "$KORVIN_SHOPIFY_TOKEN",
+                    "price_type": "retail"
+                }
+            },
+            {
+                "operation_id": "exportToShopify",
+                "params": {
+                    "store": "xxxx-2bc1",
+                    "token": "$EXTERNAL_SHOPIFY_TOKEN",
+                    "price_type": ""
+                }
+            },
+            {
+                "operation_id": "exportAllConnectedShopify"
+            },
+            {
+                "operation_id": "exportToGrailed"
+            },
+            {
+                "operation_id": "exportToOpenForVintage"
+            },
+            {
+                "operation_id": "exportToRebelle",
+                "params": {
+                    "tag_id": 11
+                }
+            },
+            {
+                "operation_id": "exportToYoox",
+                "params": {
+                    "tag_id": 25
+                }
+            },
+            {
+                "operation_id": "removeBackgroundImage"
+            },
+            {
+                "operation_id": "exportToChoose"
+            },
+            {
+                "operation_id": "exportMaisonGuava"
+            }
+        ]
+    ]
+}

@@ -1,0 +1,82 @@
+:root {
+
+    /* BLACK SHADES */
+
+    --see-through-grey: #9999;
+    --light-grey-0: #aaaaaa;
+    --light-grey-1: #888;
+    --light-grey-2: #666;
+    --mid-grey: #555;
+    --grey: #333;
+    --dark-grey: #2c2c2c;
+    --black-grey: #222;
+    --black-color: #111;
+
+
+    /* BLACK SEE-THROUGH */
+
+    --see-through-black-0: #ffffff0a;
+    --see-through-black-1: #fff1;
+    --see-through-black-2: #fff2;
+
+
+    /* WHITE SHADES */
+
+    --white-color: #ffff;
+    --off-white: #ccc;
+    --white-grey: #F2F2F2;
+    /* joopster navbar */
+
+
+    /* GREEN SHADES */
+
+    --faded-green: #2ecc71;
+    --bright-green: #0c0;
+    --success-green: rgba(68, 170, 68, 0.808);
+    --regular-green: #0f8d40;
+
+
+    /* YELLOW SHADES */
+
+    --yellow-beige: #ffbf59;
+    --mustard-yellow: #b92;
+    --bright-yellow: #fc0;
+    --salmon-orange: #ff7745;
+    --bright-orange: #f60;
+    --regular-orange: #d94500;
+
+
+    /* BROWN SHADES */
+
+    --beige: #ad8762;
+    --brown: #643;
+    --light-brown: #633;
+
+
+    /* RED SHADES */
+
+    --light-pink: #d77;
+    --danger-red: #f44;
+    --regular-red: #cc0000;
+    --pink: rgba(238, 51, 169, 0.712);
+    --burgundy: #634;
+    --regular-violet: #733CC1;
+
+
+    /* BLUE SHADES */
+
+    --blue: #2495cdab;
+    --bright-blue: #0ad;
+    --regular-blue: #2b59b5;
+    --indigo-blue: rgba(120, 102, 255, 0.733);
+    --magenta-blue: #88c;
+    --dark-magenta-blue: #77b;
+    --light-primary-blue: #68e;
+    --primary-blue: #66c;
+    --royal-blue: #336;
+    --night-blue: #236;
+    --grey-blue: #446;
+    --midnight-blue: #4848b4;
+    --sapphire-blue: #0505ed;
+
+}

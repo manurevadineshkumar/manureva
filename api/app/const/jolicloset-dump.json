@@ -1,0 +1,30 @@
+{
+    "fields": [
+        "id",
+        "images",
+        "category",
+        "sub_cat",
+        "brand",
+        "year",
+        "dimensions",
+        "size",
+        "item_condition",
+        "colors",
+        "fabrics",
+        "title",
+        "text",
+        "sell_price",
+        "available",
+        "lastUpdated"
+
+    ],
+    "conditions": {
+        "S": "neuf",
+        "A": "excellent",
+        "B": "très bon",
+        "C": "bon"
+    },
+    "genders": [
+        "femme", "homme"
+    ]
+}

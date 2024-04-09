@@ -1,0 +1,82 @@
+version: "3.9"
+
+services:
+    api-test-server:
+        build:
+            context: .
+            dockerfile: ./docker/test/api.Dockerfile
+        environment:
+            IS_PRODUCTION: "0"
+            RECREATE_TEST_DATABASE: "1"
+            REDIS_URL: "redis://redis:6379"
+            DB_DATABASE: "korvin_test"
+            DB_HOST: "mariadb"
+            DB_PORT: "3306"
+            DB_USER: "root"
+            DB_PASSWORD: "password"
+            SHARE_GROUP_SECRET: "mock-share-group-secret"
+        restart: on-failure
+        depends_on:
+            mariadb:
+                condition: service_healthy
+            redis:
+                condition: service_healthy
+        command: npm run start
+        networks:
+            - test-network
+
+    scraping-tester:
+        build:
+            context: .
+            dockerfile: ./docker/test/scraping.Dockerfile
+        environment:
+            IS_PRODUCTION: "0"
+            NODE_ENV: "test"
+            RECREATE_TEST_DATABASE: "1"
+            MOCK_RECLOJP_BASE_URL: "http://127.0.0.1:3245/"
+            REDIS_URL: "redis://redis:6379"
+            DB_DATABASE: "korvin_test"
+            DB_HOST: "mariadb"
+            DB_PORT: "3306"
+            DB_USER: "root"
+            DB_PASSWORD: "password"
+            DEEPL_API_KEY: $DEEPL_API_KEY
+            CHROME_BIN: "/usr/bin/chromium-browser"
+        restart: "no"
+        depends_on:
+            mariadb:
+                condition: service_healthy
+            redis:
+                condition: service_healthy
+            api-test-server:
+                condition: service_started
+        command: npm run test:functional
+        networks:
+            - test-network
+
+    redis:
+        image: redis:alpine
+        container_name: korvin-redis-test
+        networks:
+            - test-network
+        healthcheck:
+            test: ["CMD", "redis-cli", "ping"]
+            interval: 1s
+            timeout: 3s
+            retries: 30
+
+    mariadb:
+        image: mariadb:10.11
+        container_name: korvin-mariadb-test
+        environment:
+            MYSQL_ROOT_PASSWORD: "password"
+            MYSQL_DATABASE: "korvin_test"
+        networks:
+            - test-network
+        healthcheck:
+            test: mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD
+            timeout: 20s
+            retries: 10
+
+networks:
+  test-network:
